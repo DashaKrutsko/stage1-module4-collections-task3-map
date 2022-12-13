@@ -9,7 +9,7 @@ public class KeyValueSwapper {
         Map<String, Integer> swapMap = new HashMap<>();
         for (Map.Entry<Integer, String> e : sourceMap.entrySet()) {
             if (swapMap.containsKey(e.getValue())) {
-                if (swapMap.get(e.getValue()) < e.getKey()) {
+                if (swapMap.get(e.getValue()) > e.getKey()) {
                     swapMap.put(e.getValue(), e.getKey());
                 }
             } else {
